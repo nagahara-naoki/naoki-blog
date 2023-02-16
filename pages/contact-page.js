@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ContactPage = () => {
   return (
-    <Layout>
+    <Layout title={"ContactPage"}>
       <div className="bg-white text-center shadow-xl p-8 w-80 rounded">
         <div className="mt-4">
           <p className="font-bold text-xl">Contact info</p>

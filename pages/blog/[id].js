@@ -1,10 +1,15 @@
 import { client } from "@/libs/client";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
 export default function BlogId({ blog }) {
   console.log(blog);
+  dayjs.extend(utc);
+  dayjs.extend(timezone);
   return (
     <main>
-      {blog.updatedAt}
+      {dayjs.utc(blog.publishedAt).tz("Asia/Tokyo").format("YYYY-MM-DD")}
       <h1>{blog.title}</h1>
       <p>{blog.publishedAt}</p>
       <p>{blog.body}</p>

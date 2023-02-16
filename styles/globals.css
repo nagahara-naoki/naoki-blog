@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .headerText {
+    @apply text-gray-300 text-lg hover:bg-gray-700 p-3 rounded;
+  }
+}
